@@ -63,10 +63,10 @@ function createProduct() {
   const newProduct = document.createElement('tr');
   newProduct.classList.add("product");
   const tabBody = document.querySelector('.bodytab');
-  newProduct.innerHTML = `<td class="added-name">
+  newProduct.innerHTML += `<td class="name added-name">
   <span> </span>
   </td>
-  <td class="added-price">$<span id="priceNum"> </span></td>
+  <td class="price added-price">$<span id="priceNum"> </span></td>
   <td class="quantity">
   <input type="number" value="0" min="0" placeholder="Quantity" />
   </td>
@@ -78,18 +78,19 @@ function createProduct() {
   tabBody.appendChild(newProduct);
 
   // get name 
-  const newName = document.querySelector('.added-name');
-  const prodName = document.querySelector('.newName').value;
+  let newName = document.querySelector('.name.added-name');
+  let prodName = document.querySelector('.newName').value;
 
   //and Price 
-  const newPrice = document.querySelector('.added-price span');
-  const prodPrice = document.querySelector('.newPrice').value;
+  let newPrice = document.querySelector('.price.added-price span');
+  let prodPrice = document.querySelector('.newPrice').value;
 
   console.log(newName);
   console.log(newPrice);
   // add them 
   newName.innerText = prodName;
   newPrice.innerText = prodPrice;
+
 }
 
 
