@@ -53,7 +53,7 @@ function removeProduct(event) {
   // console.log(quantityValue);
   // let quantity = document.querySelector('.quantity input');
   // quantity.innerText = quantityValue;
-  // call subtotal with new quantity 
+  // call subtotal with new quantity  
 }
 
 // ITERATION 5
@@ -61,8 +61,11 @@ function removeProduct(event) {
 function createProduct() {
   console.log("let's create a product");
   const newProduct = document.createElement('tr');
+
   newProduct.classList.add("product");
+
   const tabBody = document.querySelector('.bodytab');
+  
   newProduct.innerHTML += `<td class="name added-name">
   <span> </span>
   </td>
@@ -74,7 +77,8 @@ function createProduct() {
   <td class="action">
   <button class="btn btn-remove">Remove</button>
   </td>`;
-  console.log(newProduct);
+
+  //console.log(newProduct);
   tabBody.appendChild(newProduct);
 
   // get name 
